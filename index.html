@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <form class="inputBox">
+        <input class="formElement inpEle" required type="text" name="Title" id="title" placeholder="Enter expense" required>
+        <input class="formElement inpEle" type="number" name="Amount" id="amount" placeholder="Enter amount" required>
+        <textarea class="formElement inpEle" name="Desc" id="desc" placeholder="Describe" rows="1" cols="20" required></textarea>
+        <button id="addExpense" class="formElement" type="submit">Add</button>
+    </form>
+
+    <div id="expenseTable"></div>
+</body>
+</html>
