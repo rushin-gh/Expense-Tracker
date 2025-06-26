@@ -41,7 +41,3 @@ body {
   overflow-wrap: break-word;     /* Modern standard */
   white-space: normal;           /* Allows line wrapping */
 }
-
-.styled-table tbody tr:hover {
-  background-color: #adfb99;
-}   

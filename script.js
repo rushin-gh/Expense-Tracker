@@ -49,14 +49,16 @@ function Print(expenseList) {
         return;
     }
 
+    let totalExpense = 0;
     let insertable = '';
     for (let expense of expenseList) {
+        totalExpense += parseFloat(expense.Amount);
         insertable += 
         `
             <tr>
                 <td>${expense.Title}</td>
-                <td>${expense.Amount}</td>
                 <td>${expense.Desc}</td>
+                <td>${expense.Amount}</td>
             </tr>
         `;
     }
@@ -67,12 +69,17 @@ function Print(expenseList) {
             <thead>
                 <tr>
                     <td>Expense</td>
-                    <td>Amount</td>
                     <td>Description</td>
+                    <td>Amount</td>
                 </tr>
             </thead>
             <tbody id="expenseTable">
                 ${insertable}
+                <tr>
+                    <td></td>
+                    <td style='background-color: #fb9999'>Total</td>
+                    <td style='background-color: #fb9999'>${totalExpense}</td>
+                </tr>
             </tbody>
         </table>
     `;
