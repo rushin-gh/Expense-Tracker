@@ -41,5 +41,41 @@ expenseAdder.addEventListener('click', function(event) {
     };
 
     expenses.push(curExpense);
-    console.log(expenses);
+    Print(expenses);
 });
+
+function Print(expenseList) {
+    if (expenseList.length == 0) {
+        return;
+    }
+
+    let insertable = '';
+    for (let expense of expenseList) {
+        insertable += 
+        `
+            <tr>
+                <td>${expense.Title}</td>
+                <td>${expense.Amount}</td>
+                <td>${expense.Desc}</td>
+            </tr>
+        `;
+    }
+
+    let tableStructure = 
+    `
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <td>Expense</td>
+                    <td>Amount</td>
+                    <td>Description</td>
+                </tr>
+            </thead>
+            <tbody id="expenseTable">
+                ${insertable}
+            </tbody>
+        </table>
+    `;
+
+    outputTable.innerHTML = tableStructure;    
+}

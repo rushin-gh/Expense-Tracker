@@ -13,3 +13,35 @@ body {
     margin: 5px;
     padding: 4px;
 }
+
+.styled-table {
+  margin: 10px 0 0 6px;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.styled-table thead {
+  background-color: #fb9999;
+  color: #ffffff;
+  text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+  border: 1px solid #dddddd;
+}
+
+.styled-table td {
+  width: 30vw;
+  padding: 12px 15px;
+  border: 1px solid #dddddd;
+  word-wrap: break-word;         /* For older browsers */
+  overflow-wrap: break-word;     /* Modern standard */
+  white-space: normal;           /* Allows line wrapping */
+}
+
+.styled-table tbody tr:hover {
+  background-color: #adfb99;
+}   
